@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ITodo } from "./components/types/data";
 import ITodoList from "./components/TodoList";
+import "./app.scss";
 
 const App: React.FC = () => {
   const [value, setValue] = useState("");
@@ -53,22 +54,28 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <input
-          value={value}
-          onChange={handleChange}
-          type="text"
-          ref={inputRef}
-          onKeyDown={handleKeyDown}
+    <div className="app">
+      <div className="container app__container">
+        <h2>My Todo app</h2>
+        <div className="app__works">
+          <input
+            className="add"
+            value={value}
+            onChange={handleChange}
+            type="text"
+            ref={inputRef}
+            onKeyDown={handleKeyDown}
+            placeholder="What needs to be done?"
+          />
+          <button onClick={addTodo}>Add</button>
+        </div>
+
+        <ITodoList
+          items={todos}
+          removeTodo={removeTodo}
+          toggleTodo={toggleTodo}
         />
-        <button onClick={addTodo}>Add</button>
       </div>
-      <ITodoList
-        items={todos}
-        removeTodo={removeTodo}
-        toggleTodo={toggleTodo}
-      />
     </div>
   );
 };

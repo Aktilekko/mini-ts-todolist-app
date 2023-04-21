@@ -1,6 +1,7 @@
 import React from "react";
 import { ITodo } from "./types/data";
 import TodoItem from "./TodoItem";
+import "./todoList.scss";
 
 export interface ITodoListProps {
   items: ITodo[];
@@ -11,7 +12,7 @@ export interface ITodoListProps {
 const TodoList: React.FC<ITodoListProps> = (props) => {
   const { items, removeTodo, toggleTodo } = props;
   return (
-    <div>
+    <div className="todoList">
       {items.map((todo) => (
         <TodoItem
           removeTodo={removeTodo}

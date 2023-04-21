@@ -1,3 +1,40 @@
 .app {
+  display: flex;
+  justify-content: center;
   text-align: center;
+
+  &__works {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    & button {
+      padding: 13px;
+      background: #fff;
+      border-radius: 50%;
+
+      &:hover {
+        background: #454242;
+        color: #fff;
+      }
+    }
+  }
+
+  &__container {
+    width: 300px;
+    margin-bottom: 20px;
+
+    & h2 {
+      margin: 0 0 20px;
+    }
+  }
+}
+
+.add {
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
 }

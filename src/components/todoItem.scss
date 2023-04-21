@@ -1,0 +1,39 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 300px;
+  padding: 5px 10px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+
+    & button {
+      background-color: rgba(255, 255, 255, 0);
+
+      &:hover {
+        & span {
+          color: #f74848;
+        }
+      }
+    }
+
+    & button span {
+      color: #fff;
+    }
+  }
+
+  & h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  & button span {
+    display: inline-block;
+  }
+}

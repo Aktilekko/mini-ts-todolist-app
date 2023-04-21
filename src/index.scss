@@ -11,8 +11,24 @@ html {
 body {
   margin: 0;
   padding: 0;
+
+  background: linear-gradient(
+    to left bottom,
+    rgb(244, 246, 247),
+    rgb(67, 158, 214),
+    rgb(244, 246, 247)
+  );
+  min-height: 100vh;
 }
 
-.container {
-  width: 700px;
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(208, 204, 204);
+    border-radius: 5px;
+  }
 }
